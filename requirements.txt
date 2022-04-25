@@ -1,0 +1,15 @@
+-----Python-----
+pandas
+urllib.request
+datetime 
+argparse
+logging
+random
+socket
+sys
+time
+
+-----Arduino-----
+Onewire
+DallasTemperature
+ESP8266 lib

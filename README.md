@@ -2,8 +2,6 @@
 
 ## Made by NPLing & Longmeow
 
-Thís repo describes a simple testbed (to...//the purpose of this testbed is...)
-
 ## Table of Contents
 1. [Requirements](#requirements)
 2. [Overall](#overall)

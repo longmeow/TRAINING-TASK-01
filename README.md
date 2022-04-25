@@ -33,7 +33,9 @@ Thís repo describes a simple testbed (to...//the purpose of this testbed is...)
 
 (Longmeow)
 
-
+You'll need to set your Raspberry Pi as a DHCP sever, also known as Router 🙈 
+Step 1: Install Raspbian OS on your brand new 200$ limited Raspberry Pi came with black case and type-C charger, give [it](https://www.wireshark.org/docs/man-pages/tshark.html) a try.
+Step 2: Set you Pi as a router. By following [this](https://www.youtube.com/watch?v=S4E35d91Xss), you'll get your job done easily instead of crying with bugs.
 
 #### ESP8266
 

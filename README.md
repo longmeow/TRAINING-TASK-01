@@ -51,4 +51,4 @@ We use **TShark** - a network protocol analyzer, CLI version of Wireshark to cap
 
 `tshark -T fields -e ip.version -e ip.src -e ip.dst -e ip.len -e ip.hdr_len -e ip.id -e ip.proto -e ip.ttl -e ip.flags -e ip.frag_offset -e ip.checksum -e tcp.dstport -E separator=, -E header=y -c <Num_of_packets>  > <File_Name>.csv`
 
-Using this command line, we've just captured some "useful" headers. Add `-e <option>` in the command line for more info of captured packet. All `<option>` will be found [here](https://www.wireshark.org/docs/dfref/).
+Using this command, we've just captured some "useful" headers. Add `-e <option>` in the command line for more info of captured packet. All `<option>` will be found [here](https://www.wireshark.org/docs/dfref/).

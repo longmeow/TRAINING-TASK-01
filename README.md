@@ -72,8 +72,6 @@ There is a wide range of attack tool, since using HTTP as protocol, we use ***Sl
 
 **To start attacking:** 
 
-`cd slowloris`
-
-`python3 slowloris.py targetedserver.com`
+`cd slowloris && python3 slowloris.py targetedserver.com`
 
 Read [Slowloris](https://github.com/gkbrk/slowloris) for more details.

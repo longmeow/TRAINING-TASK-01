@@ -15,9 +15,10 @@
 - 2 PC/laptop
 
 **Software**
-- Python3
-- Adruino IDE (including Onewire, DallasTemperature libraries) and downloaded the ESP8266 card library (You can follow the guide [here](https://www.instructables.com/How-to-Install-ESP8266-Into-Arduino-IDE/))
-- Driver CP210x to communication with ESP8266 (you can download from [here](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers))
+- Python 3.10.4
+- Adruino IDE 
+- ESP8266 card library (Follow the [guide](https://www.instructables.com/How-to-Install-ESP8266-Into-Arduino-IDE/))
+- Driver CP210x (Download [here](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers))
 
 ### Overall
 

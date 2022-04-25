@@ -33,6 +33,8 @@ Thís repo describes a simple testbed (to...//the purpose of this testbed is...)
 
 (Longmeow)
 
+
+
 #### ESP8266
 
 (Ling)
@@ -44,3 +46,9 @@ Thís repo describes a simple testbed (to...//the purpose of this testbed is...)
 #### Packet sniffer
 
 (Longmeow)
+
+We use **TShark** - a network protocol analyzer, CLI version of Wireshark to capture packets transmitted. Read the TShark's [instruction](https://www.wireshark.org/docs/man-pages/tshark.html) for more details.
+
+`tshark -T fields -e ip.version -e ip.src -e ip.dst -e ip.len -e ip.hdr_len -e ip.id -e ip.proto -e ip.ttl -e ip.flags -e ip.frag_offset -e ip.checksum -e tcp.dstport -E separator=, -E header=y -c <Num_of_packets>  > <File_Name>.csv`
+
+Using this command line, we've just captured some "useful" headers. Add `-e <option>` in the command line for more info of captured packet. All `<option>` will be found [here](https://www.wireshark.org/docs/dfref/).

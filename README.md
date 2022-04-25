@@ -61,7 +61,7 @@ After collect the data from 2 sensors, ESP8266 will a creates a localhost server
 
 We use ***TShark*** - a network protocol analyzer, CLI version of Wireshark to capture packets transmitted. Read the TShark's [instruction](https://www.wireshark.org/docs/man-pages/tshark.html) for more details. To capture packets and save to .csv file:
 
-`ttshark -T fields -e ip.version -e ip.src -e ip.dst -e ip.len -e ip.hdr_len -e ip.id -e ip.proto -e ip.ttl -e ip.flags -e ip.frag_offset -e ip.checksum -e ipv6.src -e ipv6.dst -e ipv6.tclass -e ipv6.flow -e ipv6.plen -e ipv6.nxt -e ipv6.hlim -e tcp.srcport  -e tcp.dstport -e udp.srcport -e udp.dstport -E separator=, -E header=y -c <Num_of_packets>  > <File_Name>.csv`
+`tshark -T fields -e ip.version -e ip.src -e ip.dst -e ip.len -e ip.hdr_len -e ip.id -e ip.proto -e ip.ttl -e ip.flags -e ip.frag_offset -e ip.checksum -e ipv6.src -e ipv6.dst -e ipv6.tclass -e ipv6.flow -e ipv6.plen -e ipv6.nxt -e ipv6.hlim -e tcp.srcport  -e tcp.dstport -e udp.srcport -e udp.dstport -E separator=, -E header=y -c <Num_of_packets>  > <File_Name>.csv`
 
 Using this command, we've just captured some "useful" headers (IPv4 & IPv6 & UDP/TCP port). Add `-e <option>` in the command line for more info of captured packet. All `<option>` will be found [here](https://www.wireshark.org/docs/dfref/).
 

@@ -49,7 +49,7 @@ You'll need to set your Raspberry Pi as a DHCP sever, also known as Router 🙈
 
 After collect the data from 2 sensors, ESP8266 will a creates a localhost server and starts to waiting a request. Everytime a client sends a request to that localhost, ESP8266 runs the desired code, check if client's IP is allowable and then returns the result as an http request.
 
-**Step 1:** Download and save 2 files ***esp8266.ino*** and ***utils.h*** in the same folder.
+**Step 1:** Download and save ***esp8266.ino*** and ***utils.h*** in the same folder.
 
 **Step 2:** Open file ***esp8266.ino***, modify some information such as SSID, password of your wifi, IP address of client.
 

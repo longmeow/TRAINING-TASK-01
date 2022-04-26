@@ -70,8 +70,6 @@ There is a wide range of attack tool, since using HTTP as protocol, we use ***Sl
 
 **Install using git clone:** `git clone https://github.com/gkbrk/slowloris.git`
 
-**To start attacking:** 
-
-`cd slowloris && python3 slowloris.py targetedserver.com`
+**To start attacking:** `cd slowloris && python3 slowloris.py targetedserver.com`
 
 Read [Slowloris](https://github.com/gkbrk/slowloris) for more details.

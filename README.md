@@ -37,7 +37,7 @@ The testbed is depicted in the diagram above:
 
 **SOS:** Guildlines for absolute newbie
 
-You'll need to set your Raspberry Pi as a DHCP sever, also known as Router 🙈 
+You'll need to set your Raspberry Pi as a DHCP sever, also known as Router.
 
 **Step 1:** Install Raspbian OS on your 200$ brandnew limited Raspberry Pi came with black case and type-C charger, give [it](https://www.raspberrypi.com/documentation/computers/getting-started.html) a try.
 
@@ -51,25 +51,28 @@ After collect the data from 2 sensors, ESP8266 will a creates a localhost server
 
 **Step 1:** Download and save ***esp8266.ino*** and ***utils.h*** in the same folder.
 
-**Step 2:** Open file ***esp8266.ino***, modify some information such as SSID, password of your wifi, IP address of client.
+**Step 2:** Open file ***esp8266.ino***, modify some information such as SSID, password of your access point, IP address of client.
 
 **Step 3:** Plugging ESP8266 and uploading the sketch.
 
+#### Get Data from sensors
 
-#### Packet sniffer
+Using a Python script, we can send request to the MCUnode, get data from sensors and save it to a .csv file: 'python get_data.py' 
+
+#### Capturing Datagrams
 
 We use ***TShark*** - a network protocol analyzer, CLI version of Wireshark to capture packets transmitted. Read the TShark's [instruction](https://www.wireshark.org/docs/man-pages/tshark.html) for more details. To capture packets and save to .csv file:
 
-`tshark -T fields -e ip.version -e ip.src -e ip.dst -e ip.len -e ip.hdr_len -e ip.id -e ip.proto -e ip.ttl -e ip.flags -e ip.frag_offset -e ip.checksum -e ipv6.src -e ipv6.dst -e ipv6.tclass -e ipv6.flow -e ipv6.plen -e ipv6.nxt -e ipv6.hlim -e tcp.srcport  -e tcp.dstport -e udp.srcport -e udp.dstport -E separator=, -E header=y -c <Num_of_packets>  > <File_Name>.csv`
+`python realtime_capturing.py`
 
-Using this command, we've just captured some "useful" headers (IPv4 & IPv6 & UDP/TCP port). Add `-e <option>` in the command line for more info of captured packet. All `<option>` will be found [here](https://www.wireshark.org/docs/dfref/).
+Using this command, we've just captured some "useful" headers (IPv4 & IPv6 & UDP/TCP). Add `-e <option>` in the TShark command line for more info of captured packet. All `<option>` will be found [here](https://www.wireshark.org/docs/dfref/).
 
 ### Attack tool
 
 There is a wide range of attack tool, since using HTTP as protocol, we use ***Slowloris*** - a type of DoS attack tool aim at overwhelm a targeted server by opening and maintaining many simultaneous HTTP. Periodically, it will send HTTP headers, adding to, but never completing the request to keep these connections open. The targeted server will be filled its maximum concurrent connection pool and deny additional connection attempts from clients.
 
-**Install using git clone:** `git clone https://github.com/gkbrk/slowloris.git`
+**Installation:** `git clone https://github.com/gkbrk/slowloris.git`
 
-**To start attacking:** `cd slowloris && python3 slowloris.py targetedserver.com`
+**Start attacking:** `cd slowloris && python3 slowloris.py targetedserver.com`
 
 Read [Slowloris](https://github.com/gkbrk/slowloris) for more details.

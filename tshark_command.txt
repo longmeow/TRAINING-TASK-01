@@ -1,2 +1,0 @@
-tshark -T fields -e ip.version -e ip.src -e ip.dst -e ip.len -e ip.hdr_len -e ip.id -e ip.proto -e ip.ttl -e ip.flags -e ip.frag_offset -e ip.checksum -e tcp.dstport -E separator=, -E header=y -c 20  > test001.csv
-

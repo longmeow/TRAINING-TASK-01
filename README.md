@@ -57,7 +57,8 @@ After collect the data from 2 sensors, ESP8266 will a creates a localhost server
 
 #### Get Data from sensors
 
-Using a Python script, we can send request to the MCUnode, get data from sensors and save it to a .csv file: 'python get_data.py' 
+Using a Python script, we can send request to the MCUnode, get data from sensors and save it to a .csv file:
+`python get_data.py` 
 
 #### Capturing Datagrams
 
